@@ -1,3 +1,4 @@
+// import employee object
 const Employee = require('../lib/Employee');
 
 // get employee name
