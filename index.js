@@ -58,11 +58,11 @@ const addManager = () => {
         {
             type: 'input',
             name: 'office',
-            message: "Please enter manager's office number.",
+            message: "Please enter the manager's office number",
             validate: officeInput => {
-                if(isNaN(officeInput)) {
-                    console.log('Please enter an office number.');
-                    return false;
+                if  (isNaN(officeInput)) {
+                    console.log ('Please enter an office number!')
+                    return false; 
                 } else {
                     return true;
                 }
@@ -70,12 +70,13 @@ const addManager = () => {
         }
     ])
     .then(managerData => {
-        const  {name, id, email, office} = managerData; 
+        const  { name, id, email, office} = managerData; 
         const manager = new Manager (name, id, email, office);
 
-        console.log(manager);
+        employeeArray.push(manager); 
+        console.log(manager); 
     })
-}
+};
 
 // add other employees function
 const addEmployee = () => {
@@ -206,7 +207,7 @@ addManager()
     return generateHTML(employeeArray);
   })
   .then(pageHTML => {
-    return writeFile(pageHTML);
+    return writeToFile(pageHTML);
   })
   .catch(err => {
  console.log(err);

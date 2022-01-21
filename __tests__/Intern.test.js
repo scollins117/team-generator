@@ -1,4 +1,4 @@
-// import employee object
+// import intern object
 const Intern = require('../lib/Intern');
 
 // intern has all the properties of employee plus school so we only need to test for school
