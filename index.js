@@ -1,19 +1,14 @@
-// required modules
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// import employee profiles
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
-// import generate html
 const generateHTML = require('./src/generateHTML');
 
-// array to stor team members
 const employeeArray = [];
 
-// add a manager employee function
 const addManager = () => {
     return inquirer.prompt ([
         {
@@ -78,7 +73,6 @@ const addManager = () => {
     })
 };
 
-// add other employees function
 const addEmployee = () => {
     return inquirer.prompt ([
         {
